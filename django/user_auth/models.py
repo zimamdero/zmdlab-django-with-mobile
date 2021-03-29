@@ -6,7 +6,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     user_img = models.ImageField(upload_to='imgs')
     greetings = models.TextField(max_length=500, blank=True)
-    level = models.IntegerField(default=0)
+    m_level = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
