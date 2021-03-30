@@ -44,6 +44,21 @@ class CardV1Serializer(serializers.ModelSerializer):
             'contents': {'required': True}
         }
 
+    #def update(self, instance, validated_data):
+    #    changed = False
+    #    if hasattr(validated_data, 'title'):
+    #        instance.set_title(validated_data['title'])
+    #        changed = True
+    #
+    #    if hasattr(validated_data, 'contents'):
+    #        instance.set_contents(validated_data['contents'])
+    #        changed = True
+    #
+    #    if changed:
+    #        instance.save()
+    #
+    #    return instance
+
 
 class ImgInfoSerializer(serializers.ModelSerializer):
     class Meta:
