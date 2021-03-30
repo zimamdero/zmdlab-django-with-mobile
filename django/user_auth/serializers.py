@@ -39,7 +39,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         lookup_field = 'user'
 
 
-
 class SignUpSerializer(serializers.ModelSerializer):
     username = serializers.CharField(required=True)
     email = serializers.CharField(required=True)
@@ -49,7 +48,6 @@ class SignUpSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'password', 'password2', 'email')
-
 
     def validate(self, attrs):
         user = self.context['request'].user
@@ -75,7 +73,6 @@ class SignUpSerializer(serializers.ModelSerializer):
 
         return attrs
 
-    
     def create(self, validated_data):
         user = User.objects.create(
             username=validated_data['username'],
@@ -87,7 +84,6 @@ class SignUpSerializer(serializers.ModelSerializer):
         UserProfile.objects.create(user=user)
 
         return user
-
 
 
 class PasswordChangingSerializer(serializers.ModelSerializer):

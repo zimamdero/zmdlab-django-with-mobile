@@ -27,3 +27,7 @@ urlpatterns = [
 urlpatterns += [
     path('dummy/', include('dummy.urls')),
 ]
+
+urlpatterns += [
+    path('card-v1/', include('card_v1.urls')),
+]

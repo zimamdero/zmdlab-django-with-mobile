@@ -124,7 +124,7 @@ class UEmailAuthNumberView(APIView):
         emailMessage = EmailMessage('Email auth number', '%s' % auth_num, to=[email])
         emailMessage.send()
         return Response({
-            'auth_num': auth_num,
+            #'auth_num': auth_num,
             'message': 'sending auth number to your email [%s]' % email
         })
 
