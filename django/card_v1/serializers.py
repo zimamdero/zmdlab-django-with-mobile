@@ -63,6 +63,6 @@ class CardV1Serializer(serializers.ModelSerializer):
 class ImgInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImgInfo
-        fields = ['id', 'parent_id', 'parent_type', 'img', 'title',
-                  'contents', 'created_at', 'updated_at', 'm_level',
+        fields = ['id', 'parent_id', 'parent_type', 'img', 'img_width', 'img_height',
+                  'title', 'contents', 'created_at', 'updated_at', 'm_level',
                   'like_up', 'like_down', 'report_count']

@@ -1,6 +1,5 @@
 from django.db import models
 
-
 PARENT_TYPE = (
     ('none', 'none'),
     ('card_v1', 'card_v1'),
@@ -35,7 +34,9 @@ class ImgInfo(models.Model):
     like_up = models.PositiveIntegerField(default=0)
     like_down = models.PositiveIntegerField(default=0)
     report_count = models.PositiveIntegerField(default=0)
-    img = models.ImageField(upload_to='card_v1_imgs')
+    img = models.ImageField(upload_to='card_v1_imgs', height_field='img_height', width_field='img_width')
+    img_height = models.IntegerField(blank=True, null=True)
+    img_width = models.IntegerField(blank=True, null=True)
 
 
 class Comment(models.Model):
